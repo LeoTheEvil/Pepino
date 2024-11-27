@@ -4,37 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/ControladorKappa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/ParametroIncorrecto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controlador/Validador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Modelo/Kappa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OpenAPIConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PepinoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repositorio/RepositorioKappa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servicio/ExcepcionNoEncuentraKappa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servicio/ServicioKappa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Servicio/ServicioKappaImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/internal/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/bundle-context-osgi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/bundle-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template.mf" afterDir="false" />
+    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="Cucumber">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Features/hireKappa.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Steps/hireKappaSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/internal/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/readme.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +69,14 @@
       <option name="presentableId" value="Default" />
       <updated>1732712167770</updated>
     </task>
+    <task id="LOCAL-00001" summary="Cucumber">
+      <created>1732724870081</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732724870081</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cucumber" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cucumber" />
   </component>
 </project>
