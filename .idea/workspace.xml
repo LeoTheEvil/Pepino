@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="Cucumber">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Features/hireKappa.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Steps/hireKappaSteps.java" afterDir="false" />
+    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="No estan funcionando los imports.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/RunCucumberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/internal/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/ControladorKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ControladorKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/ParametroIncorrecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ParametroIncorrecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controlador/Validador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/Validador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Kappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Modelo/Kappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenAPIConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/OpenAPIConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PepinoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/PepinoMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repositorio/RepositorioKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Repositorio/RepositorioKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servicio/ExcepcionNoEncuentraKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ExcepcionNoEncuentraKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servicio/ServicioKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servicio/ServicioKappaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Features/hireKappa.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RunCucumberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/hireKappaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Steps/hireKappaSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +43,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2pQxarorP9FsTtBLnEqgyFiV87i" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,15 +56,49 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.pepino.automation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ApplicationTests">
+    <configuration name="All in Pepino" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pepino" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApplicationTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pepino" />
+      <option name="PACKAGE_NAME" value="com.pepino.automation" />
+      <option name="MAIN_CLASS_NAME" value="com.pepino.automation.ApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests.debe_actualizar_un_kappa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pepino" />
+      <option name="PACKAGE_NAME" value="com.pepino.automation" />
+      <option name="MAIN_CLASS_NAME" value="com.pepino.automation.ApplicationTests" />
+      <option name="METHOD_NAME" value="debe_actualizar_un_kappa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests.debe_contratar_un_kappa_y_buscarlo_por_su_ID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pepino" />
+      <option name="PACKAGE_NAME" value="com.pepino.automation" />
+      <option name="MAIN_CLASS_NAME" value="com.pepino.automation.ApplicationTests" />
+      <option name="METHOD_NAME" value="debe_contratar_un_kappa_y_buscarlo_por_su_ID" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -57,6 +106,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ApplicationTests" />
+        <item itemvalue="JUnit.All in Pepino" />
+        <item itemvalue="JUnit.ApplicationTests.debe_contratar_un_kappa_y_buscarlo_por_su_ID" />
+        <item itemvalue="JUnit.ApplicationTests.debe_actualizar_un_kappa" />
       </list>
     </recent_temporary>
   </component>
@@ -76,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732724870081</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="No estan funcionando los imports.">
+      <created>1732733193568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732733193568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cucumber" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cucumber" />
+    <MESSAGE value="No estan funcionando los imports." />
+    <option name="LAST_COMMIT_MESSAGE" value="No estan funcionando los imports." />
   </component>
 </project>

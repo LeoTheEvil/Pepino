@@ -1,4 +1,4 @@
-package Modelo;
+package com.pepino.automation.Modelo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

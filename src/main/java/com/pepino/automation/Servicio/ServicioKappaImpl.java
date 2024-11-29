@@ -1,12 +1,10 @@
-package Servicio;
+package com.pepino.automation.Servicio;
 
-import Modelo.Kappa;
-import Repositorio.RepositorioKappa;
+import com.pepino.automation.Modelo.Kappa;
+import com.pepino.automation.Repositorio.RepositorioKappa;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
@@ -32,7 +30,7 @@ public class ServicioKappaImpl implements ServicioKappa{
     }
 
     @Override
-    public Kappa kappaAModificar(Long id, Kappa kappaAModificar) {
+    public Kappa actualizarKappa(Long id, Kappa kappaAModificar) {
         Kappa kappaBuscado = repositorioKappa.findById(id).get();
         kappaBuscado.setNombre(kappaAModificar.getNombre());
         kappaBuscado.setRango(kappaAModificar.getRango());

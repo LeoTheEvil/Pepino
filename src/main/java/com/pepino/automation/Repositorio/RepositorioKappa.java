@@ -1,7 +1,6 @@
-package Repositorio;
+package com.pepino.automation.Repositorio;
 
-import Modelo.Kappa;
-import org.springframework.data.domain.Pageable;
+import com.pepino.automation.Modelo.Kappa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RepositorioKappa extends JpaRepository<Kappa,Long> {

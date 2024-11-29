@@ -1,7 +1,6 @@
-package Servicio;
+package com.pepino.automation.Servicio;
 
-import Modelo.Kappa;
-import org.springframework.data.domain.Pageable;
+import com.pepino.automation.Modelo.Kappa;
 
 import java.util.List;
 

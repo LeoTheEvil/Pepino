@@ -1,8 +1,8 @@
-package Steps;
+package com.pepino.automation.Steps;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 
 public class hireKappaSteps {
     @Given("un kappa llamado Kappasuke de rango Kappitan y clase Samurai")

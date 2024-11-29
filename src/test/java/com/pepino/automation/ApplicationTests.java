@@ -1,11 +1,16 @@
-import Modelo.Kappa;
+package com.pepino.automation;
+
+import com.pepino.automation.Modelo.Kappa;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-import Servicio.ServicioKappaImpl;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ApplicationTests {

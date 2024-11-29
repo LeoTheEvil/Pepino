@@ -1,4 +1,4 @@
-package Controlador;
+package com.pepino.automation.Controlador;
 
 public class ParametroIncorrecto extends RuntimeException {
 

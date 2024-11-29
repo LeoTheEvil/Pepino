@@ -1,8 +1,8 @@
-package Controlador;
+package com.pepino.automation.Controlador;
 
-import Modelo.Kappa;
-import Servicio.ExcepcionNoEncuentraKappa;
-import Servicio.ServicioKappa;
+import com.pepino.automation.Modelo.Kappa;
+import com.pepino.automation.Servicio.ExcepcionNoEncuentraKappa;
+import com.pepino.automation.Servicio.ServicioKappa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +45,7 @@ public class ControladorKappa {
     @PutMapping("/{id}")
     public ResponseEntity actualizarKappa(@PathVariable("id") Long idKappa, @RequestBody Kappa kappa) {
         try {validador.validar(kappa);
-            return new ResponseEntity(servicioKappa.kappaAModificar(idKappa,kappa), HttpStatus.OK);
+            return new ResponseEntity(servicioKappa.actualizarKappa(idKappa,kappa), HttpStatus.OK);
         } catch(ParametroIncorrecto e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
