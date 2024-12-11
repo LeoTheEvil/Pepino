@@ -15,7 +15,7 @@ public class ControladorKappa {
 
     private final ServicioKappa servicioKappa;
     private final Validador validador;
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity contratarKappa(@RequestBody Kappa kappa) {
         try {validador.validar(kappa);
             return new ResponseEntity(servicioKappa.contratarKappa(kappa), HttpStatus.CREATED);

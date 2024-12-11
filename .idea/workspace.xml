@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="Base ya funcionando.">
+    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="SEVERE: Exception while executing pickle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ControladorKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ControladorKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/RunCucumberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Steps/hireKappaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Steps/hireKappaSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -50,7 +54,7 @@
       <recent name="com.pepino.automation" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: hireKappa">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Hire a new kappa">
     <configuration name="Feature: hireKappa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" />
@@ -119,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: hireKappa" />
         <item itemvalue="Cucumber Java.Scenario: Hire a new kappa" />
+        <item itemvalue="Cucumber Java.Feature: hireKappa" />
         <item itemvalue="JUnit.ApplicationTests" />
         <item itemvalue="JUnit.All in Pepino" />
         <item itemvalue="JUnit.ApplicationTests.debe_contratar_un_kappa_y_buscarlo_por_su_ID" />
@@ -157,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732877533469</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SEVERE: Exception while executing pickle">
+      <created>1732989963726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732989963726</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +198,17 @@
     <MESSAGE value="Cucumber" />
     <MESSAGE value="No estan funcionando los imports." />
     <MESSAGE value="Base ya funcionando." />
-    <option name="LAST_COMMIT_MESSAGE" value="Base ya funcionando." />
+    <MESSAGE value="SEVERE: Exception while executing pickle" />
+    <option name="LAST_COMMIT_MESSAGE" value="SEVERE: Exception while executing pickle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.pepino.automation.Servicio.ExcepcionNoEncuentraKappa" package="com.pepino.automation.Servicio" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

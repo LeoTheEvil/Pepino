@@ -7,6 +7,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class ServicioKappaImpl implements ServicioKappa{
@@ -25,8 +27,8 @@ public class ServicioKappaImpl implements ServicioKappa{
     }
 
     @Override
-    public Kappa buscarKappa(Long idKappa) {
-        return repositorioKappa.findById(idKappa).orElseThrow(() -> {throw new ExcepcionNoEncuentraKappa();});
+    public Optional<Kappa> buscarKappa(Long idKappa) {
+        return Optional.ofNullable(repositorioKappa.findById(idKappa).orElseThrow(() -> {throw new ExcepcionNoEncuentraKappa();}));
     }
 
     @Override

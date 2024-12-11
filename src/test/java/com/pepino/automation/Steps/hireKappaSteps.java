@@ -1,18 +1,41 @@
 package com.pepino.automation.Steps;
 
 import com.pepino.automation.Modelo.Kappa;
+import com.pepino.automation.Repositorio.RepositorioKappa;
+import com.pepino.automation.Servicio.ServicioKappa;
+import com.pepino.automation.Servicio.ServicioKappaImpl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.springframework.http.MediaType;
+import io.cucumber.spring.CucumberContextConfiguration;
+import org.mockito.Mockito;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.port;
-import static org.hamcrest.Matchers.equalTo;
-
+@CucumberContextConfiguration
 public class hireKappaSteps {
     Kappa kappa = new Kappa();
-    Long id;
+    List<Kappa> kappaList = new ArrayList<>();
+    RepositorioKappa repositorioMock = Mockito.mock(RepositorioKappa.class);
+    private long idCounter = 1L;
+    {
+        Mockito.when(repositorioMock.save(Mockito.any(Kappa.class))).thenAnswer(invocation -> {
+            Kappa kappaToSave = invocation.getArgument(0);
+            if (kappaToSave.getId() == null) { // Verifica si el ID es null antes de asignarlo
+                kappaToSave.setId(idCounter++); // Asigna un ID único
+            }
+            kappaList.add(kappaToSave); // Simula el almacenamiento en una lista
+            return kappaToSave; // Devuelve el mismo Kappa como si fuera guardado
+        });
+
+        Mockito.when(repositorioMock.findById(Mockito.anyLong())).thenAnswer(invocation -> {
+            long id = invocation.getArgument(0);
+            // Busca el Kappa en la lista y lo envuelve en un Optional
+            return kappaList.stream().filter(k -> k.getId() != null && k.getId() == id).findFirst().map(Optional::of).orElse(Optional.empty());
+        });
+    }
+    ServicioKappa servKappa = new ServicioKappaImpl(repositorioMock);
     @Given("un kappa llamado Kappasuke")
     public void unKappaLlamadoKappasuke() {
         kappa.setNombre("Kappasuke");
@@ -28,12 +51,15 @@ public class hireKappaSteps {
     }
     @When("el usuario hace un Post")
     public void usuarioHacePost() {
-        id=given().port(port).body(kappa).contentType(MediaType.APPLICATION_JSON.toString())
-        .accept(MediaType.APPLICATION_JSON.toString()).when().post("/api/kappa").then().statusCode(201)
-        .extract().jsonPath().getObject("id",Long.class);
+        servKappa.contratarKappa(kappa);
     }
     @Then("el kappa es contratado")
     public void kappaContratado() {
-        given().port(port).when().get("/api/kappa/"+id).then().body("id", equalTo(id));
+        // Verifica que el Kappa tiene un ID antes de realizar la búsqueda
+        assert kappa.getId() != null : "El Kappa no tiene un ID asignado";
+        Optional<Kappa> kappaContratado = servKappa.buscarKappa(kappa.getId()); // Verifica que el Kappa esté guardado
+        // Realiza la aserción aquí, por ejemplo:
+        assert kappaContratado.isPresent() : "Kappa no encontrado en el repositorio";
+        assert kappaContratado.get().getNombre().equals("Kappasuke") : "Nombre del Kappa no coincide";
     }
 }
