@@ -40,18 +40,59 @@ public class hireKappaSteps {
     public void unKappaLlamadoKappasuke() {
         kappa.setNombre("Kappasuke");
     }
+    @Given("una kappa llamada Nitori Kawashiro")
+    public void unaKappaLlamadaNitoriKawashiro() {
+        kappa.setNombre("Nitori Kawashiro");
+    }
+    @Given("un kappa llamado Kappabunta")
+    public void unKappaLlamadoKappabunta() {
+        kappa.setNombre("Kappabunta");
+    }
     @Given("de rango Kappitan")
     public void rangoKappitan()
     {
         kappa.setRango("Kappitan");
     }
+    @Given("de rango Kappataz")
+    public void rangoKappataz()
+    {
+        kappa.setRango("Kappataz");
+    }
+    @Given("de rango Kappa")
+    public void rangoKappa()
+    {
+        kappa.setRango("Kappa");
+    }
     @Given("de clase Samurai")
     public void claseSamurai() {
         kappa.setClase("Samurai");
     }
+    @Given("de clase Ingeniero")
+    public void claseIngeniero() {
+        kappa.setClase("Ingeniero");
+    }
+    @Given("de clase Ninja")
+    public void claseNinja() {
+        kappa.setClase("Ninja");
+    }
     @When("el usuario hace un Post")
     public void usuarioHacePost() {
         servKappa.contratarKappa(kappa);
+    }
+    @When("el usuario hace un Put")
+    public void usuarioHacePut() {
+        servKappa.contratarKappa(kappa);
+        // Verifica que el Kappa tiene un ID antes de realizar la búsqueda
+        assert kappa.getId() != null : "El Kappa no tiene un ID asignado";
+        kappa.setRango("Kappitan");
+        servKappa.actualizarKappa(kappa.getId(), kappa);
+    }
+    @When("el usuario hace un Delete")
+    public void usuarioHaceDelete() {
+        servKappa.contratarKappa(kappa);
+        // Verifica que el Kappa tiene un ID antes de realizar la búsqueda
+        assert kappa.getId() != null : "El Kappa no tiene un ID asignado";
+        servKappa.despedirKappa(kappa.getId());
     }
     @Then("el kappa es contratado")
     public void kappaContratado() {
@@ -61,5 +102,18 @@ public class hireKappaSteps {
         // Realiza la aserción aquí, por ejemplo:
         assert kappaContratado.isPresent() : "Kappa no encontrado en el repositorio";
         assert kappaContratado.get().getNombre().equals("Kappasuke") : "Nombre del Kappa no coincide";
+    }
+    @Then("el kappa es ascendido a Kappitan")
+    public void kappaAscendidoKappitan() {
+        // Verifica que el Kappa tiene un ID antes de realizar la búsqueda
+        assert kappa.getId() != null : "El Kappa no tiene un ID asignado";
+        Optional<Kappa> kappaActualizado = servKappa.buscarKappa(kappa.getId());
+        assert kappaActualizado.isPresent() : "Kappa no encontrado en el repositorio";
+        // Realiza la aserción aquí, por ejemplo:
+        assert kappaActualizado.get().getRango().equals("Kappitan") : "El rango del Kappa no coincide";
+    }
+    @Then("el kappa es despedido")
+    public void kappaDespedido() {
+        assert kappa.getId() == null : "El Kappa no pudo ser eliminado";
     }
 }

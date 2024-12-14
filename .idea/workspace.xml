@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="SEVERE: Exception while executing pickle">
+    <list default="true" id="81c823c0-164a-46c6-927d-3db4f5317740" name="Changes" comment="No se por que pero ahora anda...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ControladorKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Controlador/ControladorKappa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pepino/automation/Servicio/ServicioKappaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Steps/hireKappaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pepino/automation/Steps/hireKappaSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +50,7 @@
       <recent name="com.pepino.automation" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Hire a new kappa">
+  <component name="RunManager" selected="Cucumber Java.Feature: hireKappa">
     <configuration name="Feature: hireKappa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" />
@@ -63,6 +59,26 @@
       <module name="Pepino" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: hireKappa" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Dismiss a kappa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" />
+      <option name="GLUE" value="com.pepino.automation.Steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Pepino" />
+      <option name="NAME_FILTER" value="^Dismiss a kappa$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Dismiss a kappa$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Dismiss a kappa" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -94,10 +110,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Pepino" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Update a kappa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/pepino/automation/Features/hireKappa.feature" />
+      <option name="GLUE" value="com.pepino.automation.Steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pepino" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="NAME_FILTER" value="^Update a kappa$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Update a kappa$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Update a kappa" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,23 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTests.debe_contratar_un_kappa_y_buscarlo_por_su_ID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pepino" />
-      <option name="PACKAGE_NAME" value="com.pepino.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.pepino.automation.ApplicationTests" />
-      <option name="METHOD_NAME" value="debe_contratar_un_kappa_y_buscarlo_por_su_ID" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Hire a new kappa" />
         <item itemvalue="Cucumber Java.Feature: hireKappa" />
+        <item itemvalue="Cucumber Java.Scenario: Dismiss a kappa" />
+        <item itemvalue="Cucumber Java.Scenario: Update a kappa" />
+        <item itemvalue="Cucumber Java.Scenario: Hire a new kappa" />
         <item itemvalue="JUnit.ApplicationTests" />
-        <item itemvalue="JUnit.All in Pepino" />
-        <item itemvalue="JUnit.ApplicationTests.debe_contratar_un_kappa_y_buscarlo_por_su_ID" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732989963726</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="No se por que pero ahora anda...">
+      <created>1733952531330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733952531330</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +224,8 @@
     <MESSAGE value="No estan funcionando los imports." />
     <MESSAGE value="Base ya funcionando." />
     <MESSAGE value="SEVERE: Exception while executing pickle" />
-    <option name="LAST_COMMIT_MESSAGE" value="SEVERE: Exception while executing pickle" />
+    <MESSAGE value="No se por que pero ahora anda..." />
+    <option name="LAST_COMMIT_MESSAGE" value="No se por que pero ahora anda..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
