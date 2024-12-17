@@ -28,7 +28,7 @@ public class ServicioKappaImpl implements ServicioKappa{
 
     @Override
     public Optional<Kappa> buscarKappa(Long idKappa) {
-        return Optional.ofNullable(repositorioKappa.findById(idKappa).orElseThrow(() -> {throw new ExcepcionNoEncuentraKappa();}));
+        return Optional.ofNullable(repositorioKappa.findById(idKappa).orElseThrow(() -> {throw new ExcepcionNoEncuentraKappa("Kappa no encontrado");}));
     }
 
     @Override
