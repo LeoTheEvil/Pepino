@@ -62,7 +62,25 @@ Feature: Hire_Kappa
     And el usuario hace un Put de rango vacio
     Then el ascenso es rechazado
 
-  Scenario: Fail to dismiss a kappa
-    Given un id de kappa vacio
-    When el usuario hace un Delete
-    Then mensaje de error "Kappa no encontrado"
+  Scenario: List all the kappas
+    Given un kappa llamado Kappasuke
+    And de rango Kappitan
+    And de clase Samurai
+    And es el primer kappa
+    And una kappa llamada Nitori Kawashiro
+    And de rango Kappataz
+    And de clase Ingeniero
+    And es el segundo kappa
+    And un kappa llamado Kappataro
+    And de rango Kappa
+    And de clase Arquero
+    And es el tercer kappa
+    When el kappa existe en la base de datos
+    And el usuario lista todos los kappas empezando por <offset> en paginas de <size>
+    Then muestra una lista de todos los kappas
+
+    Examples:
+      |offset|size|
+      |0     |100 |
+      |0     |2   |
+      |1     |2   |

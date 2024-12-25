@@ -23,7 +23,7 @@ public class ServicioKappaImpl implements ServicioKappa{
     @Override
     public List<Kappa> listarTodosKappas(int offset, int size) {
         Pageable page = PageRequest.of(offset, size);
-        return repositorioKappa.findAll(page).getContent();
+        return repositorioKappa.findAll();
     }
 
     @Override

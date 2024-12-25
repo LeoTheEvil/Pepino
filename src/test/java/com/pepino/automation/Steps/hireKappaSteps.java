@@ -16,14 +16,17 @@ import java.util.Optional;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 @CucumberContextConfiguration
 public class hireKappaSteps {
     Kappa kappa = new Kappa();
+    Kappa kappa1 = new Kappa();
+    Kappa kappa2 = new Kappa();
+    Kappa kappa3 = new Kappa();
     List<Kappa> kappaList = new ArrayList<>();
     RepositorioKappa repositorioMock = Mockito.mock(RepositorioKappa.class);
+    Exception error = null;
     private long idCounter = 1L;
     int statusCode;
     {
@@ -55,6 +58,10 @@ public class hireKappaSteps {
     public void unKappaLlamadoKappabunta() {
         kappa.setNombre("Kappabunta");
     }
+    @Given("un kappa llamado Kappataro")
+    public void unKappaLlamadoKappataro() {
+        kappa.setNombre("Kappataro");
+    }
     @Given("un kappa sin nombre")
     public void unKappaSinNombre() {
         kappa.setNombre("");
@@ -65,8 +72,7 @@ public class hireKappaSteps {
     }
     @Given("un id de kappa vacio")
     public void idKappaVacio() {
-        //kappa.setId(null);
-        throw new ExcepcionNoEncuentraKappa("Kappa no encontrado");
+        kappa.setId(null);
     }
     @Given("de rango Kappitan")
     public void rangoKappitan()
@@ -95,9 +101,28 @@ public class hireKappaSteps {
     public void claseNinja() {
         kappa.setClase("Ninja");
     }
+    @Given("de clase Arquero")
+    public void claseArquero() {
+        kappa.setClase("Arquero");
+    }
     @Given("sin clase")
     public void sinClase() {
         kappa.setClase("");
+    }
+    @Given("es el primer kappa")
+    public void primerKappa() {
+        kappa1=kappa;
+        servKappa.contratarKappa(kappa1);
+    }
+    @Given("es el segundo kappa")
+    public void segundoKappa() {
+        kappa2=kappa;
+        servKappa.contratarKappa(kappa2);
+    }
+    @Given("es el tercer kappa")
+    public void tercerKappa() {
+        kappa3=kappa;
+        servKappa.contratarKappa(kappa3);
     }
     @When("el kappa existe en la base de datos")
     public void kappaExisteEnBaseDeDatos() {
@@ -111,7 +136,11 @@ public class hireKappaSteps {
     }
     @When("el usuario hace un Get")
     public void usuarioHaceGet() {
-        servKappa.buscarKappa(kappa.getId());
+        try {
+            servKappa.buscarKappa(kappa.getId());
+        } catch (Exception e) {
+            error = e;
+        }
     }
     @When("el usuario hace un Put de rango Kappitan")
     public void usuarioHacePutRangoKappitan() {
@@ -126,6 +155,10 @@ public class hireKappaSteps {
     @When("el usuario hace un Delete")
     public void usuarioHaceDelete() {
         servKappa.despedirKappa(kappa.getId());
+    }
+    @When("el usuario lista todos los kappas empezando por {int} en paginas de {int}")
+    public void usuarioListaTodosKappas(int offset, int size) {
+        servKappa.listarTodosKappas(offset,size);
     }
     @Then("el kappa es contratado")
     public void kappaContratado() {
@@ -155,12 +188,10 @@ public class hireKappaSteps {
     }
     @Then("mensaje de error {string}")
     public void kappaNoEncontrado(String mensajeEsperado) {
-        ExcepcionNoEncuentraKappa excepcion = assertThrows(ExcepcionNoEncuentraKappa.class, () -> {
-            // Código que debería lanzar la excepción
-            servKappa.buscarKappa(kappa.getId());
-        });
-        // Verificamos el mensaje de la excepción
-        assertEquals(mensajeEsperado, excepcion.getMessage());
+        if (error == null) {
+            fail("Kappa encontrado");
+        }
+        assertEquals(mensajeEsperado, error.getMessage());
     }
     @Then("el ascenso es rechazado")
     public void ascensoRechazado() {
@@ -170,5 +201,20 @@ public class hireKappaSteps {
         assert kappaActualizado.isPresent() : "Kappa no encontrado en el repositorio";
         // Realiza la aserción aquí, por ejemplo:
         assert kappaActualizado.get().getRango().equals("Kappataz") : "El rango del Kappa no coincide";
+    }
+    @Then("muestra una lista de todos los kappas")
+    public void muestraListaTodosKappas() {
+        assert kappa1.getId() != null : "El Kappa no tiene un ID asignado";
+        Optional<Kappa> kappaContratado1 = servKappa.buscarKappa(kappa1.getId()); // Verifica que el Kappa esté guardado
+        assert kappaContratado1.isPresent() : "Kappa no encontrado en el repositorio";
+        assert kappaContratado1.get().getNombre().equals(kappa1.getNombre()) : "Nombre del Kappa no coincide";
+        assert kappa2.getId() != null : "El Kappa no tiene un ID asignado";
+        Optional<Kappa> kappaContratado2 = servKappa.buscarKappa(kappa2.getId()); // Verifica que el Kappa esté guardado
+        assert kappaContratado2.isPresent() : "Kappa no encontrado en el repositorio";
+        assert kappaContratado2.get().getNombre().equals(kappa2.getNombre()) : "Nombre del Kappa no coincide";
+        assert kappa3.getId() != null : "El Kappa no tiene un ID asignado";
+        Optional<Kappa> kappaContratado3 = servKappa.buscarKappa(kappa3.getId()); // Verifica que el Kappa esté guardado
+        assert kappaContratado3.isPresent() : "Kappa no encontrado en el repositorio";
+        assert kappaContratado3.get().getNombre().equals(kappa3.getNombre()) : "Nombre del Kappa no coincide";
     }
 }
